@@ -389,7 +389,6 @@ class Controle_De_Produtos():
         self.salvar_base_de_dados()
         self.display_tv_controle_produtos()
         controle_estoque = Controle_De_Estoque(janela,aba_estoque,aba_transacoes)
-        controle_estoque.df_estoque = pd.read_excel('Controle de Estoque.xlsx', sheet_name=aba_estoque,engine='openpyxl')
         controle_estoque.display_tv_estoque()
         tkinter.messagebox.showinfo(title='Cadastro', message='Cadastro feito com sucesso!', parent=self.janela2)
         self.controle_protudos_produto.delete(0, END)
